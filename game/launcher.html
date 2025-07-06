@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head class="noScrollBar">
+        <title>tivect</title>
+        <meta name="description" content="2D Free Explore Game. Singeplayer & Multiplayer. PvP, PvE, Build.">
+        <meta property="og:url" content="https://game.tivect.com">
+        <meta property="og:title" content="tivect">
+        <meta property="og:image" content="http://game.tivect.com/icon.png">
+        <meta property="og:image:secure_url" content="https://game.tivect.com/icon.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="500">
+        <meta property="og:image:height" content="500">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="2D Free Explore Game. Singelplayer & Multiplayer. PvP, PvE, Build.">
+        <link rel="stylesheet" href="launcher.css">
+        <link rel="icon" type="image/png" href="icon.png">
+    </head>
+    <body class="noScrollBar">
+        <div id="menu">
+            <h1 id="menuTtl">tivect</h1>
+            <a href="https://tivect.com/howto.html"><button class="menuButton">How To Play</button></a>
+            <a href="https://tivect.com/changelog.html"><button class="menuButton">Change Log</button></a>
+            <button class="menuButton" onclick=getFile()>Import Data</button>
+            <h1 id="htd">Download a save file by pressing (L) and (O) at the same time</h1>
+            <h1 id="note"></h1>
+            <a hidden="hidden" id="downloadSave" download="world.tivect"></a>
+            <input hidden="hidden" id="saveFile" type="file" onchange=readSave()>
+        </div>
+        <div id="mainScreen">
+            <div id="launcher">
+                <div id="offline">
+                    <div id="logoImg"></div>
+                </div>
+                <div id="startBar">
+                    <div id="startButtons">
+                        <button id="gameMode">Singleplayer</button>
+                        <button id="start">Play</button>
+                        <button id="copyright">&copy; 2021-2025 <a id="site"href="https://tivect.com/">tivect</a>.</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="loadingScreen"></div>
+        <div id="amc05">
+            <canvas id="canvas"></canvas>
+            <script id="gameScript" src="game.js"></script>
+            <script src="gamef.js"></script>
+        </div>
+    </body>
+</html>
